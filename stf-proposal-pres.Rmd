@@ -6,7 +6,7 @@ output:
   ioslides_presentation:
     fig_caption: yes
     fig_retina: 1
-    fig_width: 4
+    fig_width: 4.2
     fig_height: 3
     keep_md: yes
     smaller: yes
@@ -78,7 +78,7 @@ lab.logins %>% mutate(Quarter=factor(quarter(datetime),
                   levels=c(4, 1, 2, 3))) %>% 
     arrange(Quarter) %>% group_by(Location, Quarter) %>% 
     summarize(Logins=n_distinct(ID)) -> lab.quarterly
-lab.quarterly$quarter <- revalue(lab.quarterly$Quarter,
+lab.quarterly$Quarter <- revalue(lab.quarterly$Quarter,
                              c("4"="Fall",
                                "1"="Winter",
                                "2"="Spring",
