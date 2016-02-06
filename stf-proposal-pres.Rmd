@@ -212,7 +212,7 @@ logins %>% mutate(Hour=factor(as.numeric(format(logins$datetime, "%H")))) %>%
     dplyr::summarize(Logins=n_distinct(datetime)) -> hourly
 ```
 
-```{r hourly_hist, message=FALSE, fig.width=7}
+```{r hourly_hist, message=FALSE, fig.width=8, fig.height=4}
 ggplot(data=hourly, aes(x=Hour, y=Logins, fill=Location)) + 
     scale_fill_manual(values=c("#CC6666", "#9999CC", "#66CC99")) +
     geom_bar(stat="identity") + 
