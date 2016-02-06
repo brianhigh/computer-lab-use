@@ -91,7 +91,7 @@ lab.logins$Location <- factor(lab.logins$Location)
 lab.logins %>% mutate(Quarter=factor(quarter(datetime), 
                   levels=c(4, 1, 2, 3))) %>% 
     arrange(Quarter) %>% group_by(Location, Quarter) %>% 
-    summarize(Logins=n_distinct(ID)) -> lab.quarterly
+    dplyr::summarize(Logins=n_distinct(ID)) -> lab.quarterly
 lab.quarterly$Quarter <- revalue(lab.quarterly$Quarter,
                              c("4"="Fall",
                                "1"="Winter",
@@ -120,7 +120,7 @@ dev.off()
 lab.logins %>% mutate(Quarter=factor(quarter(datetime), 
                   levels=c(4, 1, 2, 3))) %>% 
     arrange(Quarter) %>% group_by(Quarter) %>% 
-    summarize(Logins=n_distinct(ID)) -> lab.quarterly
+    dplyr::summarize(Logins=n_distinct(ID)) -> lab.quarterly
 
 # Show a table of quarterly logins
 lab.quarterly$Quarter <- revalue(lab.quarterly$Quarter,
@@ -165,7 +165,7 @@ lab.logins$Location <- factor(lab.logins$Location)
 lab.logins %>% mutate(Month=factor(months(datetime, abbreviate=T), 
                   levels=c("Sep","Oct","Nov", "Dec", "Jan"))) %>% 
     arrange(Month) %>% group_by(Location, Month) %>% 
-    summarize(Logins=n_distinct(datetime)) -> lab.monthly
+    dplyr::summarize(Logins=n_distinct(datetime)) -> lab.monthly
 ```
 
 ```{r lab_monthly_hist, message=FALSE}
@@ -183,7 +183,7 @@ dev.off()
 logins %>% mutate(Month=factor(months(datetime, abbreviate=T), 
                   levels=c("Sep","Oct","Nov", "Dec", "Jan"))) %>% 
     arrange(Month) %>% group_by(Location, Month) %>% 
-    summarize(Logins=n_distinct(datetime)) -> monthly
+    dplyr::summarize(Logins=n_distinct(datetime)) -> monthly
 ```
 
 ```{r monthly_hist, message=FALSE}
@@ -201,3 +201,4 @@ dev.off()
 
 Students rely upon both the server and the lab workstations to study 
 and get their work done.
+
