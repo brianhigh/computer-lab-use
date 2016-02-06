@@ -1,0 +1,6 @@
+.small-centered {
+    margin:0 auto;
+    display:block;
+    text-align:center;
+    font-size:smaller;
+}
