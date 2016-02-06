@@ -202,3 +202,25 @@ dev.off()
 Students rely upon both the server and the lab workstations to study 
 and get their work done.
 
+## Hourly Logins Show Lab Preference
+
+Lab use greatly exceeds server use during the morning and early afternoon.
+
+```{r hourly_table, message=FALSE, results='asis'}
+logins %>% mutate(Hour=factor(as.numeric(format(logins$datetime, "%H")))) %>% 
+    arrange(Hour) %>% group_by(Location, Hour) %>% 
+    dplyr::summarize(Logins=n_distinct(datetime)) -> hourly
+```
+
+```{r hourly_hist, message=FALSE, fig.width=7}
+ggplot(data=hourly, aes(x=Hour, y=Logins, fill=Location)) + 
+    scale_fill_manual(values=c("#CC6666", "#9999CC", "#66CC99")) +
+    geom_bar(stat="identity") + 
+    ggtitle(paste("Hourly Logins", "\n", timespan)) + 
+    labs(x="Hour of the Day", y="Logins") + theme_bw() + mytheme
+```
+```{r hourly_hist_dev_off, echo=F, results='hide'}
+dev.off()
+```
+
+This shows that students prefer to use the labs while they are on campus.
