@@ -14,7 +14,7 @@ output:
     css: styles.css
 ---
 
-## Proposal Summary
+## Replace lab computers and monitors
 
 * Replace 14 PCs and monitors
 * For a total cost of $19,950
@@ -22,13 +22,26 @@ output:
 * Used by 80 graduate students in each year
 * For daily academic and research work
 
-## How many students benefit?
+<div style="text-align:center" markdown="1">
 
-We currently have 80 graduate students in our department. We have X new 
-students each year. So, over the five-year expected life of these PCs, we 
-expect Y students to use and benefit from these PCs.
+![Dell Optiplex 9020 and 23" monitor](9020-sff_sm.png)
 
-## How do students benefit?
+</div>
+
+## 160 students to benefit over 5 years
+
+- We currently have 80 graduate students in our department. 
+- We have about 20 new students each year. 
+- So, over the five-year expected life of these PCs ...
+- We expect 160 students to use and benefit from these PCs.
+
+<div style="text-align:center" markdown="1">
+
+![](160_students_sm.png)
+
+</div>
+
+## Specialized software -- ideal workspace
 
 These are the main reasons why the students value the computer labs:
 
@@ -38,10 +51,19 @@ These are the main reasons why the students value the computer labs:
 - Special software (Oracle Crystal Ball, Graphpad Prism)
 - Only workspace (before adviser has been selected)
 - Internet connection is fast and reliable
+- Close proximity to department spaces.
 
 These benefits were summarized from feedback provided through a *_recent survey_*.
 
-## Quarterly Lab Logins
+## Located near department spaces
+
+<div style="text-align:center" markdown="1">
+
+![DEOHS computer labs are near department spaces.](campus_map_sm.jpg)
+
+</div>
+
+## Use increases throughout school year
 
 ```{r install_packages, message=FALSE, echo=FALSE}
 # Install packages (if necessary)
@@ -140,7 +162,9 @@ The mean quarterly login count is _`r round(mean(lab.quarterly$Logins), 0)`_.
 Usage increases throughout the academic year as students become more dependent 
 upon the computer labs for their work.
 
-## Lab Logins, Compared with Server
+<!-- THIS SLIDE HAS BEEN COMMENTED OUT AS BEING NOT PARTICULARLY RELEVANT ...
+
+## Lab and server usage are comparable
 
 We see a greater number of total logins on the student server (HAL). However, 
 both the server and the computer lab follow the same usage trends.
@@ -202,7 +226,9 @@ dev.off()
 Students rely upon both the server and the lab workstations to study 
 and get their work done.
 
-## Hourly Logins Show Lab Preference
+-->
+
+## Students prefer lab when on campus
 
 Lab use greatly exceeds server use during the morning and early afternoon.
 
@@ -223,4 +249,4 @@ ggplot(data=hourly, aes(x=Hour, y=Logins, fill=Location)) +
 dev.off()
 ```
 
-This shows that students prefer to use the labs while they are on campus.
+This plot shows that students prefer to use the labs while they are on campus.
