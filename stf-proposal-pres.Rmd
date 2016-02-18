@@ -16,29 +16,31 @@ output:
 
 ## Replace lab computers and monitors
 
-* Replace 14 PCs and monitors
-* For a total cost of $19,950
-* In two graduate student computer labs
-* Used by 80 graduate students in each year
-* For daily academic and research work
+<div class="columns-2">
 
 <div style="text-align:center" markdown="1">
-
 ![Dell Optiplex 9020 and 23" monitor](9020-sff_sm.png)
+</div>
+
+* Replace 14 PCs and monitors
+* Total cost: $19,950
+* Two student computer labs
+* Used by 80 students in each year
+* Academic and research work
+* Equipment purchased in 2010
+* Memory upgraded in 2013
 
 </div>
 
-## 160 students to benefit over 5 years
+## 200 students to benefit over 5 years
 
 - We currently have 80 graduate students in our department. 
-- We have about 20 new students each year. 
+- Plus, we gain about 30 new students each year. 
 - So, over the five-year expected life of these PCs ...
-- We expect 160 students to use and benefit from these PCs.
+- We expect 200 students to use and benefit from these PCs.
 
 <div style="text-align:center" markdown="1">
-
-![](160_students_sm.png)
-
+![](students_sm.png)
 </div>
 
 ## Specialized software -- ideal workspace
@@ -48,19 +50,20 @@ These are the main reasons why the students value the computer labs:
 - Productive, efficient, and collaborative workspace
 - Less interference (noise, distractions) than in library
 - More complete office (bigger screen, better PC, printing)
-- Special software (Oracle Crystal Ball, Graphpad Prism)
+- Specialized software (Oracle Crystal Ball, Graphpad Prism)
 - Only workspace (before adviser has been selected)
 - Internet connection is fast and reliable
-- Close proximity to department spaces.
+- Close proximity to department spaces
 
-These benefits were summarized from feedback provided through a *_recent survey_*.
+These benefits were summarized from feedback provided through 
+
+- a *_recent survey_* with 40 responses
+- over 40 student and faculty *_endorsements_*.
 
 ## Located near department spaces
 
 <div style="text-align:center" markdown="1">
-
 ![DEOHS computer labs are near department spaces.](campus_map_sm.jpg)
-
 </div>
 
 ## Use increases throughout school year
@@ -249,4 +252,11 @@ ggplot(data=hourly, aes(x=Hour, y=Logins, fill=Location)) +
 dev.off()
 ```
 
-This plot shows that students prefer to use the labs while they are on campus.
+Students prefer lab PCs over the server for performance and ease-of-use.
+
+## Funding this proposal will help ...
+
+- Replace 14 lab computers and monitors
+- Benefit 200 students
+- Support a valuable student computing environment
+
